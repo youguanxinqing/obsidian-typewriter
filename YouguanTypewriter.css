@@ -210,6 +210,9 @@ body {
   --font-adaptive-smaller: var(--font-smaller);
   --font-adaptive-smallest: var(--font-smallest);
   --line-width-adaptive: var(--line-width);
+
+  --edit-code-font-size: 13px;
+  --read-code-font-size: 13px;
 }
 
 /* Phone font sizes */
@@ -429,7 +432,7 @@ body .markdown-source-view .CodeMirror .CodeMirror-activeline,
 .cm-s-obsidian .HyperMD-codeblock {
   color: var(--text-code);
   font-family: var(--font-monospace);
-  font-size: inherit !important;
+  font-size: var(--edit-code-font-size) !important;
 }
 
 /* TABLES */
@@ -595,9 +598,16 @@ span.cm-hashtag.cm-hashtag-end {
 /* CODE */
 .markdown-preview-view code {
   color: var(--text-code);
-  font-size: inherit;
+  font-size: var(--read-code-font-size) !important;
   font-family: var(--font-monospace);
 }
+
+/*pre[class*=language-] > code[class*=language-] {*/
+/*  padding-top: 0 !important;*/
+/*  font-size: 10px !important;*/
+/*  line-height: 1.5em !important;*/
+/*}*/
+
 
 /* BLOCKQUOTES */
 .markdown-preview-view blockquote {
